@@ -1,0 +1,59 @@
+NOTICE
+======
+
+This directory contains a MODIFIED VENDORED COPY of Meta-World
+(https://github.com/rlworkgroup/metaworld), distributed under the MIT License.
+The upstream LICENSE file is retained next to this notice and applies to all
+unmodified upstream material.
+
+Upstream state
+--------------
+The copy corresponds approximately to upstream commit
+a0009ed9a208ff9864a5c1368c04c273bb20dd06 (early 2022).
+
+Why the fork is required
+------------------------
+DuSkill chains several Meta-World skills into a single long-horizon episode in
+scenes that contain four manipulable objects at once. Upstream Meta-World
+cannot express this, so `pip install metaworld` will NOT work; install this
+directory instead:
+
+    pip install -e duskill/envs/metaworld
+
+Modifications made for DuSkill
+------------------------------
+Code
+  * metaworld/envs/mujoco/mujoco_env.py
+      `max_path_length` raised from 500 to 2000.
+  * metaworld/envs/mujoco/sawyer_xyz/sawyer_xyz_env.py
+      `max_path_length` raised from 500 to 3000.
+  * metaworld/policies/policy.py
+      Added the `move_u` (unit-vector move scaled by a speed parameter) and
+      `move_acc` (velocity error / acceleration) hooks used by the DuSkill
+      scripted experts in duskill/envs/metaworld_complex/policies.
+  * metaworld/policies/sawyer_plate_slide_side_v2_policy.py
+      Four debug `print` statements commented out.
+
+Assets (all under metaworld/envs/assets_v2/)
+  * objects/assets/lever.xml
+      `LeverAxis` hinge range widened from 0-1.57 to 0-1.9 rad.
+  * scene/basic_scene.xml
+      Table and retaining walls enlarged (table half-size .7 x .4 -> .9 x .5,
+      walls moved out to match) so four objects fit in a single scene.
+  * objects/assets/xyz_base.xml
+      The `corner2` and `corner3` cameras were re-aimed for the wider scene.
+  * scene/basic_scene_a.xml
+      New scene variant.
+  * sawyer_xyz/sawyer_multitask_*.xml
+      32 new multi-object scenes (31 four-skill combinations plus
+      `sawyer_multitask_test.xml`), together with
+      `sawyer_xyz/sawyer_multi_stage_buttons.xml`.
+  * objects/assets/{puck,drawer,coffeemachine}_noname.xml
+      New object variants with the on-object name labels removed.
+  * objects/assets/buttonbox_{L,R,FL,FR}.xml and buttonbox_dependencies.xml
+      New button-box placements plus recolored button materials
+      (`btn_green`, `btn_blue`, `btn_purple`).
+
+Apart from the above (and whitespace / line-ending normalisation of many
+assets_v2 XML files), the contents of this directory are unmodified upstream
+Meta-World.

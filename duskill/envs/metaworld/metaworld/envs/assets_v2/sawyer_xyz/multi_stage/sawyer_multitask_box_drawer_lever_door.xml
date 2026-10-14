@@ -1,0 +1,56 @@
+<mujoco>
+    <include file="../scene/basic_scene_a.xml"/>
+    <include file="../objects/assets/puck_goal_dependencies.xml"/>
+    <include file="../objects/assets/lever_dependencies.xml"/>
+    <include file="../objects/assets/box_dependencies.xml"/>
+    <include file="../objects/assets/handle_press_dependencies.xml"/>
+    <include file="../objects/assets/coffeemachine_dependencies.xml"/>
+    <include file="../objects/assets/buttonbox_dependencies.xml"/>
+    <include file="../objects/assets/drawer_dependencies.xml"/>
+    <include file="../objects/assets/doorlock_dependencies.xml"/>
+
+    <include file="../objects/assets/peg_block_dependencies.xml"/>
+    <include file="../objects/assets/peg_insert_dependencies.xml"/>
+
+    <include file="../objects/assets/xyz_base_dependencies.xml"/>
+
+    <worldbody>
+        <include file="../objects/assets/xyz_base.xml"/>
+
+        <body name="drawer" pos="0.2 1.03 0">
+            <include file="../objects/assets/drawer_noname.xml"/>
+        </body>
+
+        <body name="boxbody" pos="0.55. 0.6 0">
+            <include file="../objects/assets/box.xml"/>
+        </body>
+
+        <body name="boxbodytop" pos="0.25 0.5 0" quat="1 0 0 1">
+            <freejoint/>
+            <include file="../objects/assets/boxtop.xml"/>
+        </body>
+
+        <body name="lever" pos="-0.15 0.9 0">
+            <include file="../objects/assets/lever.xml"/>
+        </body>
+
+        <body name="door" pos="-0.45 .75 0.15" euler="0 0 0.57">
+          <include file="../objects/assets/doorlockB.xml"/>
+        </body>
+
+    </worldbody>
+
+<!--    <worldbody>-->
+
+<!--        <site name="goal" pos="0.12 0.88 0.05" size="0.02"-->
+<!--              rgba=".8 0 0 1"/>-->
+<!--    </worldbody>-->
+
+    <actuator>
+        <position ctrllimited="true" ctrlrange="-1 1" joint="r_close" kp="400"  user="1"/>
+        <position ctrllimited="true" ctrlrange="-1 1" joint="l_close" kp="400"  user="1"/>
+    </actuator>
+    <equality>
+        <weld body1="mocap" body2="hand" solref="0.02 1"></weld>
+    </equality>
+</mujoco>

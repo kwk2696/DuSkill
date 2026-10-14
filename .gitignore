@@ -1,0 +1,13 @@
+*.egg-info/
+__pycache__/
+datasets/
+models/
+wandb/
+
+tags
+*.npy
+*.swp
+*.swo
+*.pkl
+*.zip
+*.avi

@@ -1,0 +1,19 @@
+# Install these two from source FIRST, in this order:
+#   pip install git+https://github.com/kwk2696/sb3-jax-haiku.git
+#   pip install -e duskill/envs/metaworld      # modified Meta-World fork; upstream metaworld will NOT work
+jax==0.4.3
+jaxlib==0.4.3            # must match your CUDA/cuDNN build
+dm-haiku==0.0.9
+optax==0.1.4
+numpy==1.22.3
+scipy>=1.4.1
+gym==0.21.0              # <0.26 required (4-tuple step API); needs setuptools<66, wheel<0.40 to install
+stable-baselines3>=1.5,<2.0
+transformers>=4.27        # imported by sb3_jax (decision-transformer module) at package import time
+mujoco-py>=2.1,<2.2      # MuJoCo 2.1.0
+glfw
+Cython<3
+wandb==0.13.10
+opencv-python
+tqdm
+PyYAML

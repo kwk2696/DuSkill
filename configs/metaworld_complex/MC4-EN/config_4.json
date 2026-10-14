@@ -1,0 +1,58 @@
+{
+	"total_tasks": 12,
+	"train_tasks": [
+		["puck", "door", "button", "drawer"],
+		["puck", "door", "button", "drawer"],
+		["puck", "drawer", "door", "button"],
+		["puck", "drawer", "door", "button"],
+		["drawer", "puck", "door", "button"],
+		["drawer", "puck", "door", "button"],
+		["drawer", "door", "puck", "button"],
+		["drawer", "door", "puck", "button"],
+		["button", "puck", "door", "drawer"],
+		["button", "puck", "door", "drawer"],
+		["button", "door", "puck", "drawer"],
+		["button", "door", "puck", "drawer"]
+	],
+	"train_nfuncs": [
+		[2, 0, 2, 6],
+		[6, 4, 0, 8],
+
+		[6, 6, 0, 2],
+		[2, 8, 8, 0],
+
+		[6, 2, 8, 0],
+		[8, 6, 0, 2],
+
+		[8, 0, 2, 0],
+		[6, 4, 6, 2],
+		
+		[2, 6, 8, 6],
+		[0, 2, 4, 8],
+		
+		[2, 8, 6, 8],
+		[0, 0, 2, 6]
+	],
+	"test_tasks": [
+		["puck", "button", "drawer", "door"],
+		["puck", "button", "drawer", "door"],
+		["puck", "button", "drawer", "door"],
+		["drawer", "puck", "button", "door"],
+		["drawer", "puck", "button", "door"],
+		["drawer", "puck", "button", "door"],
+		["button", "drawer", "puck", "door"],
+		["button", "drawer", "puck", "door"],
+		["button", "drawer", "puck", "door"]
+	],
+	"test_nfuncs": [
+		[0, 6, 2, 2],
+		[4, 8, 0, 6],
+		[8, 4, 6, 6],
+		[2, 0, 6, 6],
+		[4, 8, 8, 2],
+		[0, 4, 4, 6],
+		[4, 2, 0, 2],
+		[6, 0, 8, 6],
+		[8, 4, 4, 2]
+	]
+}

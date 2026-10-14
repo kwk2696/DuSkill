@@ -1,0 +1,29 @@
+{
+	"total_tasks": 6,
+	"train_tasks": [
+		["puck", "door", "button", "drawer"],
+		["puck", "drawer", "door", "button"],
+		["drawer", "puck", "door", "button"],
+		["drawer", "door", "puck", "button"],
+		["button", "puck", "door", "drawer"],
+		["button", "door", "puck", "drawer"]
+	],
+	"train_nfuncs": [
+		[4, 4, 4, 4],
+		[4, 4, 4, 4],
+		[4, 4, 4, 4],
+		[4, 4, 4, 4],
+		[4, 4, 4, 4],
+		[4, 4, 4, 4]
+	],
+	"test_tasks": [
+		["puck", "button", "drawer", "door"],
+		["drawer", "puck", "button", "door"],
+		["button", "drawer", "puck", "door"]
+	],
+	"test_nfuncs": [
+		[4, 4, 4, 4],
+		[4, 4, 4, 4],
+		[4, 4, 4, 4]
+	]
+}

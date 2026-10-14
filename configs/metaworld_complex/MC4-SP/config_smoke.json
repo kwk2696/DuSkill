@@ -1,0 +1,16 @@
+{
+	"train_tasks": [
+		["puck", "door", "button", "drawer"],
+		["drawer", "puck", "door", "button"]
+	],
+	"train_nfuncs": [
+		[2, 0, 6, 6],
+		[2, 2, 0, 0]
+	],
+	"test_tasks": [
+		["puck", "button", "drawer", "door"]
+	],
+	"test_nfuncs": [
+		[2, 2, 2, 0]
+	]
+}

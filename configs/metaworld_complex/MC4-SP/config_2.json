@@ -1,0 +1,88 @@
+{
+	"total_tasks": 12,
+	"train_tasks": [
+		["puck", "door", "button", "drawer"],
+		["puck", "door", "button", "drawer"],
+		["puck", "drawer", "door", "button"],
+		["puck", "drawer", "door", "button"],
+		["drawer", "puck", "door", "button"],
+		["drawer", "puck", "door", "button"],
+		["drawer", "door", "puck", "button"],
+		["drawer", "door", "puck", "button"],
+		["button", "puck", "door", "drawer"],
+		["button", "puck", "door", "drawer"],
+		["button", "door", "puck", "drawer"],
+		["button", "door", "puck", "drawer"]
+	],
+	"train_nfuncs": [
+		[2, 0, 6, 6],
+		[4, 4, 2, 0],
+
+		[4, 2, 0, 0],
+		[6, 8, 8, 6],
+
+		[2, 2, 0, 0],
+		[8, 4, 8, 6],
+
+		[6, 0, 2, 0],
+		[2, 4, 6, 2],
+		
+		[6, 6, 8, 6],
+		[0, 4, 4, 2],
+		
+		[2, 8, 6, 8],
+		[6, 0, 4, 6]
+	],
+	"test_tasks": [
+		["puck", "button", "drawer", "door"],
+		["puck", "button", "drawer", "door"],
+		["puck", "button", "drawer", "door"],
+		["drawer", "puck", "button", "door"],
+		["drawer", "puck", "button", "door"],
+		["drawer", "puck", "button", "door"],
+		["button", "drawer", "puck", "door"],
+		["button", "drawer", "puck", "door"],
+		["button", "drawer", "puck", "door"],
+
+		["handle", "puck", "door", "button"],
+		["handle", "puck", "door", "button"],
+		["handle", "puck", "door", "button"],
+		["handle", "puck", "door", "button"],
+		["handle", "puck", "door", "button"],
+
+		["lever", "drawer", "puck", "door"],
+		["lever", "drawer", "puck", "door"],
+		["lever", "drawer", "puck", "door"],
+		["lever", "drawer", "puck", "door"],
+		["lever", "drawer", "puck", "door"],
+
+		["puck", "lever", "drawer", "door"],
+		["puck", "button", "handle", "door"]
+	],
+	"test_nfuncs": [
+		[0, 2, 2, 2],
+		[6, 8, 4, 4],
+		[8, 4, 8, 8],
+		[0, 2, 4, 4],
+		[4, 8, 6, 4],
+		[8, 4, 6, 8],	
+		[4, 0, 0, 2],
+		[6, 6, 8, 6],
+		[2, 4, 8, 4],
+
+		[0, 8, 8, 8],
+		[2, 8, 8, 8],
+		[4, 8, 8, 8],
+		[6, 8, 8, 8],
+		[8, 8, 8, 8],
+
+		[0, 8, 8, 8],
+		[2, 8, 8, 8],
+		[4, 8, 8, 8],
+		[6, 8, 8, 8],
+		[8, 8, 8, 8],
+		
+		[2, 2, 2, 2],
+		[2, 2, 2, 2]
+	]
+}
